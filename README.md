@@ -17,6 +17,8 @@ $ python augmentation.py 10 2 今日の天気は晴れなのかもしれない�
 日頃のお天気は快晴なのかもしれないし、雨なのかもしれません
 ```
 
+上から表現の近い順番に出力されていきます。文章ベクトルの取得には、`rinna/japanese-gpt2-small`を利用しています。
+
 ## Command description
 ```
 $ python augmentation.py [gen_max] [n_max]
