@@ -112,8 +112,10 @@ def augmentation(text, n_max, gen_max, combination_max=1000000):
         
 if __name__ == "__main__":
     setup()
-    original = sys.argv[1]
-    for i in sort_with_distance(original, augmentation(original, 100, 100)):
+    gen_max = int(sys.argv[1])
+    n_max = int(sys.argv[2])
+    original = sys.argv[3]
+    for i in sort_with_distance(original, augmentation(original, n_max, gen_max)):
         print(i)
 
     
