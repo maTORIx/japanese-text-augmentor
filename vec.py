@@ -1,12 +1,12 @@
 import os
 import torch
-from transformers import T5Tokenizer, AutoModelForCausalLM
+from transformers import T5Tokenizer, GPT2LMHeadModel
 
 device = os.environ.get("DEVICE", "cpu")
 
-tokenizer = T5Tokenizer.from_pretrained("rinna/japanese-gpt2-medium")
+tokenizer = T5Tokenizer.from_pretrained("rinna/japanese-gpt2-small")
 tokenizer.do_lower_case = True
-model = AutoModelForCausalLM.from_pretrained("rinna/japanese-gpt2-medium").to(device)
+model = GPT2LMHeadModel.from_pretrained("rinna/japanese-gpt2-small").to(device)
 
 
 def calc_vec(text):
