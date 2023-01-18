@@ -83,7 +83,7 @@ def augmentation(text, n_max, gen_max, combination_max=1000000):
             selectable_words.append([word[0]])
         else:
             synonyms = get_synonyms(word[0])
-            synonyms.append(word[0])
+            synonyms = [word[0]] + synonyms
             selectable_words.append(synonyms)
 
     n1combs = np.array(generateCombinations(selectable_words, 1, combination_max))
